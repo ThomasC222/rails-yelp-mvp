@@ -1,0 +1,10 @@
+<h1>Restaurants#new</h1>
+<p>
+  <%= simple_form_for @restaurant do |f| %>
+    <%= f.input :name, label: 'Le nom du super restau', error: 'name is mandatory, please specify one' %>
+    <%= f.input :address, hint: 'Son adresse.' %>
+    <%= f.input :phone_number %>
+    <%= f.input :category, collection: Restaurant::CATEGORIES %>
+    <%= f.button :submit %>
+  <% end %>
+</p>

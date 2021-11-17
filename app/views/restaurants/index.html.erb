@@ -1,0 +1,10 @@
+<h1>Les Yummy Top restaurants trop bon</h1>
+<div class="container"><% @restaurants.each do |restaurant| %>
+  <div class="menu">
+    <div><%= link_to restaurant.name, restaurant_path(restaurant),
+    class: "btn btn-primary" %> </div>
+    <% end %>
+  </div>
+
+  <div><%= link_to "Create a new restaurant", new_restaurant_path() %></div>
+</div>
